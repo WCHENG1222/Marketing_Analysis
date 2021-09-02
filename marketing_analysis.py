@@ -7,6 +7,8 @@ import pathlib
 def main():
     # | InvoiceNo | StockCode | Description | Quantity | InvoiceDate | UnitPrice | CustomerID | Country |
     # | InvoiceDate | -> date format = mm/dd/yyyy time
+
+    # dataset source: https://www.kaggle.com/carrie1/ecommerce-data
     retail_data = pd.read_csv(
         r"retail_data.csv", sep=',', encoding='ISO-8859-1', dtype={'CustomerID': str, 'InvoiceNo': str},
         infer_datetime_format=True, parse_dates=['InvoiceDate']
